@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AngularJS First Application</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+	<div ng-app>
+		<h1>Sample Application</h1>
+		<p>Enter your Name: <input  type="text" ng-model="my_firstname" /></p>
+		<p>Enter your Last name: <input  type="text" ng-model="my_lastname" /></p>
+		<p>Enter your Phone: <input  type="text" ng-model="my_phone" /></p>
+
+		<ul>
+			<li>
+			<p> Name: <span ng-bind="my_firstname"></span> </p>
+			</li>
+			<li>
+			<p> Last name: <span ng-bind="my_lastname"></span> </p>
+			</li>
+			<li>
+			<p> Phone: <span ng-bind="my_phone"></span> </p>
+			</li>
+		</ul>
+
+	</div>
+	<script type="text/javascript"src="angular.min.js"></script>
+</body>
+</html>

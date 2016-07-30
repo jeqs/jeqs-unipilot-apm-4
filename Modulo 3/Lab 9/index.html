@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<title>AngularJS First Application</title>
+	<meta charset="utf-8" />
+	<script type="text/javascript"src="angular.min.js"></script>
+</head>
+<body>
+	<div ng-controller="controller_one">
+		<h1>Autos</h1>
+		<ul>
+			<li ng-repeat="auto in autos">{{ auto.marca }} {{ auto.modelo }}</li>
+		</ul>
+	</div>
+
+    <div ng-controller="controller_two">
+        <h1>Impares</h1>
+        <ul>
+            <li ng-repeat="impar in impares">{{ impar }}</li>
+        </ul>
+    </div>
+	
+	<script type="text/javascript">
+	angular.module('app', [])
+    .controller('controller_one', function($scope){
+    $scope.autos = [
+        {
+            marca: "Mazda",
+            modelo: "2015"
+        },
+        {
+            marca: "Chevrolet",
+            modelo: "2013"
+        },
+        {
+            marca: "Toyota",
+            modelo: "2016"
+        }
+    ];
+    
+    }).controller('controller_two', function($scope){
+        $scope.impares = ["1", "3", "5", "7", "9"];
+    });
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+body {
+    width: 80%;
+    height: auto;
+}
+header {
+    text-align: center;
+    border: 1px solid black;
+}
+.menu {
+	width: 30%;
+    height: auto;
+    float: left;
+    border: 1px solid black;
+}
+label {
+  display: block;
+  margin: .5em 0 0 0;
+}
+.boton {
+  display: block;
+  margin: 1em 0;
+}
+footer {
+    text-align: center;
+    clear: both;
+    border: 1px solid black;
+}

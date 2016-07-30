@@ -1,0 +1,64 @@
+@import url(https://fonts.googleapis.com/css?family=Fjalla+One);
+
+body{  
+    color: #333; 
+    font-family: "Fjalla One" Arial, "Monaco", sans-serif; 
+    font-size: 16px;
+}
+
+#container{           
+    margin: 0 auto;    
+}
+ 
+#container #contentUp article{
+    color: #0000CD; /*Azul*/
+}
+
+#container #contentMD article{
+    color: #FF0000; /*Rojo*/
+}
+
+#container #contentDW article{
+    color: #008000; /*Verde*/
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) { 
+}
+ 
+@media screen and (max-width: 768px){  
+    #container #contentUp article{
+        color: #696969; /*Gris*/
+        position: absolute;
+        top: 28%;
+    }
+
+    #container #contentMD article{
+        color: #CD853F; /*Peru*/
+        position: absolute;
+        top: 13%;
+    }
+
+    #container #contentDW article{
+        color: #FF69B4; /*Rosa*/
+        position: absolute;
+        top: 0%;
+    }
+}
+
+@media screen and (min-width: 1200px)  {  
+    #container #contentUp article{
+        background-image: url('imagen.jpg');
+    }
+
+    #container #contentUp article p{
+        visibility: hidden;
+    }
+
+    #container #contentMD article{
+        color: #008000; /*Verde*/
+    }
+
+    #container #contentDW article{
+        color: #0000CD; /*Azul*/
+    }
+}

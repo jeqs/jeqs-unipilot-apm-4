@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<title>AngularJS First Application</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+	
+	<div ng-controller="appController">
+		<h1>Calculator</h1>
+
+		<p>Enter A: <input type="number" ng-model="var_a" /></p>
+		<p>Enter B: <input type="number" ng-model="var_b" /></p>
+
+		<p>Result: <span ng-bind="var_result"></span> </p>
+		
+		<div ng-show="revealDiv">
+			<h1>No es posible dividir por cero</h1>
+		</div>
+
+		<button ng-click="sumButton()" >Sum</button>
+		<button ng-click="multiButton()" >Mul</button>
+		<button ng-click="divButton()" >Div</button>
+	</div>
+
+	<script type="text/javascript"src="angular.min.js"></script>
+	
+	<script type="text/javascript">
+		angular.module('app', [])
+		.controller('appController', function($scope){
+			
+			$scope.revealDiv = false;
+
+			$scope.var_result = 0;
+			$scope.sumButton = function(){
+				$scope.var_result = $scope.var_a + $scope.var_b;
+			};
+
+			$scope.multiButton = function(){
+				$scope.var_result = $scope.var_a * $scope.var_b;
+			};
+
+			$scope.divButton = function(){
+				if ($scope.var_b > 0) {
+					$scope.var_result = $scope.var_a / $scope.var_b;
+				}
+				else
+				{
+					$scope.revealDiv = true;
+				}
+			};
+			
+		});
+	</script>
+</body>
+</html>

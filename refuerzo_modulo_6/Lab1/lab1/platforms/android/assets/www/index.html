@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="lab1a">
+    <head>
+        <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *"> -->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+
+        
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+        <script type="text/javascript" src="https://code.angularjs.org/1.5.7/angular-route.min.js"></script>
+        <script type="text/javascript" src="js/lab1a.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+
+        <title>Hello World</title>
+    </head>
+    <body>
+        <div class="app">
+            <h1>Apache Cordova</h1>
+            <div id="deviceready" class="blink">
+                <p class="event listening">Connecting to Device</p>
+                <p class="event received">Device is Ready</p>
+            </div>
+            </br>
+            <div ng-controller="controller">
+                <p>Enter full name: <input type="text" ng-model="name" uppercase /></p>
+                <p>Full name: <span ng-bind="name"></span></p>
+
+                <p>Id: <span ng-bind="id"></span></p>
+                <p>Profession: <span ng-bind="profession"></span></p>
+                <p>Salary: <span ng-bind="salary"></span></p>
+                <p>Phone: <span ng-bind="phone"></span></p>
+                <p>Address: <span ng-bind="address"></span></p>
+            </div>
+        </div>
+
+      
+        
+
+    </body>
+</html>

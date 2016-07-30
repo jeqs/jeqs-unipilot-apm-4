@@ -1,0 +1,61 @@
+@import url(https://fonts.googleapis.com/css?family=Fjalla+One);
+
+body{  
+    color: #333; 
+    font-family: "Fjalla One" Arial, "Monaco", sans-serif; 
+    font-size: 16px;
+}
+
+#container{           
+    margin: 0 auto;    
+    max-width: 768px; 
+}
+
+#container header, footer{ 
+    background: #DDD;
+}
+
+#container #contentLeft {
+     display: inline;
+}
+
+#container #contentCenter {
+    display: inline;
+}
+
+#container #contentRight {
+     display: inline;
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) { 
+}
+ 
+@media screen and (max-width: 768px){ 
+    
+    #container header{ 
+        visibility: hidden;
+    }
+
+    #container footer{ 
+        position: absolute;
+        top: 40%;
+    }
+
+    #container #contentLeft {
+        display: block;
+        position: absolute;
+        top: 28%;
+    }
+
+    #container #contentCenter {
+        display: block;
+        position: absolute;
+        top: 13%;
+    }
+
+    #container #contentRight {
+        display: block;
+        position: absolute;
+        top: 0%;
+    }
+}

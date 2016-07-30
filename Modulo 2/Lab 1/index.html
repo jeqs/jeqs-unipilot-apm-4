@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- Lenguaje del contendo -->
+<head> <!-- Elementos de configuracion -->
+    <meta charset="UTF-8"> <!-- Conjunto caracteres configura el sitio  -->
+    <title>Lab26</title>  <!-- Respeta ancho dispositivo, minima escala y maxima escala -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> <!-- Config cómo se comporta el sitio en diferentes navegador web -->
+    <link rel="stylesheet" type="text/css" href="normalize.css"> <!-- Resetear toda configuracion que venga por defecto en el navegador  -->
+    <link rel="stylesheet" type="text/css" href="skeleton.css"> <!-- Orden si importa, carga de arriba a abajo, izquierda derecha  -->
+    <link rel="stylesheet" href="styles.css"> 
+</head> 
+<body> <!--   -->
+    <section id="container"> <!-- Etiqueta HTML5   -->
+        <header> <!-- Cabecera  -->
+            <h1>Mi sitio de Películas</h1> 
+            <p>Este es nuestro sitio de peliculas con Microdatos</p>
+        </header>  <!-- Microdatos: Hacer semantico el código -->
+        <section id="content"> <!-- Contenido etiqueta section parecido etiqueda div -->
+            <article> <!-- Mejor jerarquia primero section luego article -->
+                <div itemscope itemtype="http://schema.org/Movie"> <!-- itemscope: Microdatos idea refiere el sitio y ayuda al posicionamiento de los sitios  -->
+                    <h2 itemprop="name">Inception</h2> <!-- Propiedad   -->
+                    <div itemprop="director" itemscope="http://schema.org/Person"> <!-- Propiedad Director hace parte formato Person  -->
+                        Director: <span itemprop="director">Christopher Nolan</span> 
+                    </div>
+                    <span itemprop="genre">Ciencia Ficción</span> <!-- Propiedad Genre -->
+                    <a href="#" itemprop="trailer">Trailer De la Película</a> <!-- Propiedad trailer -->
+                </div>
+            </article>
+            <article>
+                <h2>Titulo Texto</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad autem culpa dolorem dolores dolorum laboriosam minima modi mollitia nam non obcaecati perspiciatis quo ratione rerum, sapiente tenetur velit veritatis vero?</p>
+            </article>
+        </section>
+        <footer>
+            Creado en 2016 &copy;
+        </footer>
+    </section>
+</body>
+</html>

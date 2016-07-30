@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="lab1a">
+<head>
+    <title>Lab1</title>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script type="text/javascript" src="https://code.angularjs.org/1.5.7/angular-route.min.js"></script>
+    
+    <script type="text/javascript" src="js/lab1a.js"></script>
+</head>
+<body>
+   <h1>Lab1</h1>
+    <div ng-controller="controller">
+        <p>Enter full name: <input type="text" ng-model="name" uppercase /></p>
+        <p>Full name: <span ng-bind="name"></span></p>
+
+        <p>Id: <span ng-bind="id"></span></p>
+        <p>Profession: <span ng-bind="profession"></span></p>
+        <p>Salary: <span ng-bind="salary"></span></p>
+        <p>Phone: <span ng-bind="phone"></span></p>
+        <p>Address: <span ng-bind="address"></span></p>
+        
+	</div>
+</body>
+</html>

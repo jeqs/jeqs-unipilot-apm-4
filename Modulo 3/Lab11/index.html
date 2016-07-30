@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html ng-app="changeClass">
+<head>
+    <title>Lab11</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+</head>
+<body>
+
+    <div ng-controller="controller-one">
+
+        <div class="container" ng-mouseleave="outMouseImg()" ng-mouseenter="onMouseImg()">
+            <h2 ng-class="class_title">Nah titulo</h2>
+            <p ng-class="class_paragraph">Paragrahp - Paragrahp - Paragrahp</p>        
+        </div>
+        
+        <button ng-click="changeClassPropertiesTitle()">Cambiar 1 Click</button>
+
+        <button ng-dblclick="changeClassPropertiesParagraph()">Cambiar 2 Click</button>
+
+        <button ng-click="resetClass()">Eliminar Estilos</button>
+
+        {{ event_click }}
+    </div>
+    
+    <script type="text/javascript">
+
+        angular.module('changeClass', [])
+               .controller('controller-one', function($scope){
+                
+                $scope.changeClassPropertiesTitle = function(){
+                    $scope.class_title = "changeClassPropertiesTitle";
+                };
+                $scope.changeClassPropertiesParagraph = function(){
+                    $scope.class_paragraph = "changeClassPropertiesParagraph";
+                };
+                $scope.resetClass = function(){
+                    $scope.class_title = "";
+                    $scope.class_paragraph = "";
+                };
+                $scope.outMouseImg = function(){
+                        $scope.event_click = "Cursor Fuera de la Imagen";
+                };
+                $scope.onMouseImg = function(){
+                        $scope.event_click = "Cursor Dentro de la Imagen";
+                };
+
+            });
+    
+    </script>
+</body>
+</html>

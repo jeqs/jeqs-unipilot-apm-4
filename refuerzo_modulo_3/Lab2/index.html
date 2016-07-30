@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app="lab1b">
+<head>
+    <title>Lab1b</title>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    
+    <script type="text/javascript" src="js/lab1bController.js"></script>
+</head>
+<body>
+   <h1>Lab1b</h1>
+    <div ng-controller="controller">
+    	<h1>Inputs</h1>
+        <ul>
+            <li ng-repeat="input in angular_inputs">{{ input.name }}</li>
+        </ul>
+	</div>
+</body>
+</html>
