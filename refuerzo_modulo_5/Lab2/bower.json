@@ -1,0 +1,21 @@
+{
+  "name": "lab2",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "jQuispe <jeqs.quispe@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/jeqs/jeqs-unipilot-apm-4",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "angularjs#^1.5.8",
+    "angular-route": "^1.5.8"
+  }
+}
