@@ -31,7 +31,8 @@ angular.module('app.controllers', ['ngCordova'])
 .controller('deviceCtrl', ['$scope', '$stateParams', 
 function ($scope, $stateParams) {
 
-	$scope.device = localStorage.getItem('device');
+	//$scope.device = localStorage.getItem('device');
+	$scope.device = JSON.stringify(localStorage.getItem('device'));
 	$scope.cordova = localStorage.getItem('cordova');
 	$scope.model = localStorage.getItem('model');
 	$scope.platform = localStorage.getItem('platform');
