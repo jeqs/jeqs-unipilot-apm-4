@@ -27,7 +27,7 @@ angular.module('app.controllers', ['ngCordova'])
 		// Dialog Promtp
 		$scope.getDialogPromtp = function(){
 
-			var msj = 'Usuario selecciono la opcion: ' + localStorage.geItem('opcion');
+			var msj = 'Usuario selecciono la opcion: ' + localStorage.getItem('opcion');
 
 			$cordovaDialogs.prompt(msj, 'Prompt', ['Ok', 'Cancel'] ).then(
 				function(result) {
