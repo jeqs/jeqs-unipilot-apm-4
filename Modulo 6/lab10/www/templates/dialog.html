@@ -1,0 +1,12 @@
+<ion-view title="Dialog" id="page1">
+    <ion-content padding="true" class="has-header">
+        <button id="dialog-button1" class=" button button-positive  button-block " ng-click="getDialogAlert()">Alert</button>
+        <button id="dialog-button2" class=" button button-positive  button-block " ng-click="getDialogConfirm()">Confirm</button>
+        <button id="dialog-button3" class=" button button-positive  button-block " ng-click="getDialogPromtp()">Prompt</button>
+        <form id="dialog-form1" class="list ">
+            <label class="item item-input " id="dialog-input1">
+                <input type="text" id="input1" placeholder="Mensaje ingresado: "> {{ mensajeUsuario }}
+            </label>
+        </form>
+    </ion-content>
+</ion-view>
