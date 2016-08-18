@@ -1,0 +1,19 @@
+<ion-view title="Rest" id="page1">
+    <ion-content padding="true" class="has-header">
+        <button id="rest-button1" class=" button button-positive  button-block " ng-click="getProductList()">Get Products</button>
+        
+        <ion-list id="rest-list1">
+            <ion-item id="rest-list-item1" ng-repeat="item in list">
+                <button id="rest-button{{item.id}}" class=" button button-positive  button-block " ng-click="getProductDetail({{item.id}})">{{item.name}} detail </button>
+                    <div ng-show="revelDiv">
+                        <ion-item id="list{{item.id}}-item1" >{{detail.name}}</ion-item>
+                        <ion-item id="list{{item.id}}-item2" >{{detail.id}}</ion-item>
+                        <ion-item id="list{{item.id}}-item3" >{{detail.price}}</ion-item>
+                        <ion-item id="list{{item.id}}-item4" >{{detail.type}}</ion-item>
+                    </div>
+                </ion-item>
+            </ion-item>
+        </ion-list>
+
+    </ion-content>
+</ion-view>

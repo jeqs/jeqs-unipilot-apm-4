@@ -1,0 +1,20 @@
+<ion-view title="Rest" id="page1">
+    <ion-content padding="true" class="has-header">
+        <button id="rest-button1" class=" button button-positive  button-block " ng-click="getProductList()">Get Products</button>
+        <ion-list id="rest-list1">
+        	<ion-item id="rest-list-item1">List: </ion-item>
+            <ion-item id="rest-list-item2" ng-repeat="item in list">{{item.name}}</ion-item>
+        </ion-list>
+
+		<button id="rest-button2" class=" button button-positive  button-block " ng-click="getProductDetail()">Get Product Detail</button>
+        <ion-list id="page-list1">
+            <ion-item id="page-list-item1">{{item.name}}</ion-item>
+            <ion-item id="page-list-item2">{{item.id}}</ion-item>
+            <ion-item id="page-list-item3">{{item.price}}</ion-item>
+            <ion-item id="page-list-item4">{{item.type}}</ion-item>
+        </ion-list>
+
+        <button id="rest-button3" class=" button button-positive  button-block " ng-click="productCreate()">Create Product</button>
+
+    </ion-content>
+</ion-view>
